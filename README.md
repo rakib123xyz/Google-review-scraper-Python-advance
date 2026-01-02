@@ -1,79 +1,107 @@
-# Google Review Scraper
+# Google Review Scraper (Python + Camoufox)
 
-A robust Python-based tool designed to scrape reviews from Google Maps listings. This project utilizes **Camoufox** (a stealthy wrapper for Playwright) to provide **Advanced Stealth Scraping** capabilities, evade bot detection, manage browser fingerprints, and handle dynamic content loading effectively.
+A professional-grade Google Review data extraction system built in Python for market research and business consulting use cases.
 
-## Features
+This project was developed as part of a client market research engagement for a business consultant, where large volumes of structured customer review data were required for analysis, benchmarking, and strategic decision-making.
 
-*   **Advanced Stealth & CAPTCHA Bypass**: Uses `Camoufox` to automatically manage browser fingerprints, user agents, and headers to mimic real user behavior, significantly reducing the risk of blocks and CAPTCHAs.
-*   **Infinite Scrolling**: Automatically handles scroll events to load all reviews for a listing.
-*   **Cookie Management**: Supports loading `cookies.json` to maintain sessions or bypass initial consent popups.
-*   **Data Extraction**: Extracts key details including:
-    *   Dealer/Business Name
-    *   Location
-    *   Reviewer Name
-    *   Rating
-    *   Date
-    *   Review Text
-*   **CSV Export**: Saves data incrementally to CSV files to prevent data loss.
-*   **Logging**: Integrated logging for tracking progress and debugging.
+## Project Use Case
 
-## Prerequisites
+*   **Market research and customer sentiment analysis**
+*   **Competitor benchmarking across multiple businesses**
+*   **Business intelligence and consulting reports**
+*   **Automated collection of public review data**
 
-*   Python 3.8 or higher
-*   `pip` (Python package manager)
+## Key Features
+
+### 📊 Business-Ready Data Output
+*   Structured CSV files per target business
+*   Incremental saving to prevent data loss
+*   Ready for Excel, Google Sheets, Power BI, or Python analysis
+
+### 🛡️ Stealth & Reliability
+*   Uses **Camoufox** (stealth browser automation) to mimic real user behavior
+*   Reduces CAPTCHA challenges and automated detection
+*   Designed for long-running and large-scale scraping sessions
+
+### 🔄 Dynamic Review Loading
+*   Automatically handles dynamically loaded review content
+*   Ensures full review coverage for businesses with high review volume
+
+### 🍪 Session & Cookie Management
+*   Supports loading session cookies to:
+    *   Bypass consent and verification prompts
+    *   Maintain authenticated sessions
+    *   Improve scraping stability
+
+### 🧾 Structured Data Extraction
+Extracted fields include:
+*   Business name and location
+*   Reviewer name
+*   Rating
+*   Review date
+*   Review text
+
+### 📜 Logging & Monitoring
+*   Integrated logging for progress tracking and debugging
+
+## Technology Stack
+
+*   **Python 3.8+**
+*   **Camoufox** (Playwright-based stealth automation)
+*   Playwright-compatible browser engines
+*   CSV-based data pipelines
 
 ## Installation
 
-1.  **Clone the repository** (if applicable) or download the source code.
-
-2.  **Install dependencies**:
-    This project relies on `camoufox`.
-
+1.  **Install dependencies**
     ```bash
     pip install camoufox
     ```
 
-3.  **Install Browser Binaries**:
-    Camoufox requires specific browser binaries to function.
-
+2.  **Install browser binaries**
     ```bash
     python -m camoufox fetch
     ```
 
 ## Configuration
 
-Before running the scraper, you need to set up the input files in the `Scraper` directory.
-
-### 1. Input URLs (`input.txt`)
-Create a file named `input.txt` in the same directory as the script. Add the Google Maps URLs you wish to scrape, one per line.
-
-Example:
+### Input URLs (`input.txt`)
+Add Google review listing URLs (one per line):
 ```text
-https://www.google.com/maps/place/Some+Business+Name/...
-https://www.google.com/maps/place/Another+Business/...
+https://www.google.com/...
+https://www.google.com/...
 ```
 
-### 2. Cookies (`cookies.json`)
-To avoid CAPTCHAs or login prompts, it is recommended to use valid session cookies.
-1.  Log in to Google in your regular browser.
-2.  Use a browser extension (like "EditThisCookie" or "Cookie-Editor") to export cookies for `.google.com`.
-3.  Save the exported JSON content as `cookies.json` in the script directory.
+### Cookies (`cookies.json`) – Recommended
+Using session cookies improves stability and reduces interruptions.
+1.  Log in to Google in a regular browser
+2.  Export cookies for `.google.com`
+3.  Save as `cookies.json` in the project directory
 
 ## Usage
 
-Navigate to the directory containing the script and run it:
-
+Run the scraper:
 ```bash
-cd Scraper
 python google_review_scraper.py
 ```
 
-The script will launch a browser (non-headless by default), navigate to the URLs, scroll through reviews, and save the data.
+The browser launches (non-headless by default), loads reviews dynamically, and exports structured data automatically.
 
 ## Output
 
-The script generates CSV files named `review_list_1.csv`, `review_list_2.csv`, etc., corresponding to the order of URLs in `input.txt`.
+CSV files: `review_list_1.csv`, `review_list_2.csv`, ...
+Each file corresponds to a URL from `input.txt`.
+
+## Professional Context
+
+*   Built as part of a real client market research project
+*   Client identity and proprietary data are intentionally excluded
+*   Demonstrates real-world experience with:
+    *   Stealth scraping
+    *   Market research automation
+    *   Reliable data extraction pipelines
 
 ## Disclaimer
 
-This tool is for educational purposes only. scraping data from websites should be done in accordance with the website's Terms of Service and `robots.txt` policy.
+This project is shared as previous professional experience.
+Users are responsible for ensuring compliance with website Terms of Service and applicable regulations when using this code.
