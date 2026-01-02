@@ -92,6 +92,8 @@ The browser launches (non-headless by default), loads reviews dynamically, and e
 
 CSV files: `review_list_1.csv`, `review_list_2.csv`, ...
 Each file corresponds to a URL from `input.txt`.
+<img width="1896" height="950" alt="Screenshot 2026-01-02 181324" src="https://github.com/user-attachments/assets/151441f0-5b70-46c2-8ca1-83ff304b8fe8" />
+
 
 ## Professional Context
 
