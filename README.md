@@ -1,3 +1,4 @@
+<img width="1901" height="794" alt="Screenshot 2026-01-02 180800" src="https://github.com/user-attachments/assets/43e46134-6e0d-438b-a712-0f2650ca0c8e" />
 # Google Review Scraper (Python + Camoufox)
 
 A professional-grade Google Review data extraction system built in Python for market research and business consulting use cases.
